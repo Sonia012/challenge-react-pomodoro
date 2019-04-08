@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import './App.css';
+// codereview:
+// - yeah arrow functies!
+// - veel comments = handig
+// - setState call is asynchronous, dus als je 2 keer this.setState gebruikt in 1 functie,
+// kan het zijn dat hij 1 keer naar de geupdate value kijkt en 1 keer naar de oude...
+// daarom beter werken met this.setState als functie die previous state in de parameters heeft staan
+// vb. this.setState((prevState) => ({ sessionTime: prevState.sessionTime + 1000 }))
 
 const Header = () => <h1>Pomodoro</h1>
 
